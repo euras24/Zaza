@@ -1,12 +1,585 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
 
-]]--
+-- Instances: 32 | Scripts: 5 | Modules: 0 | Tags: 0
+local G2L = {};
 
-local v0={};v0["1"]=Instance.new("ScreenGui",game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));v0["1"]['Name']=[[Test]];v0["1"]['ZIndexBehavior']=Enum.ZIndexBehavior.Sibling;v0["2"]=Instance.new("Frame",v0["1"]);v0["2"]['BorderSizePixel']=0 + 0 ;v0["2"]['BackgroundColor3']=Color3.fromRGB(61 -16 ,32 + 13 ,45);v0["2"]['Size']=UDim2.new(0,165 + 10 ,1474 -(1329 + 145) ,20 + 2 );v0["2"]['Position']=UDim2.new(533.00548 -(43 + 490) ,971 -(140 + 831) ,1850.00847 -(1409 + 441) ,0 -0 );v0["2"]['BorderColor3']=Color3.fromRGB(859 -(240 + 619) ,718 -(15 + 703) ,0 + 0 );v0["2"]['Name']=[[Message1]];v0["3"]=Instance.new("Folder",v0["2"]);v0["3"]['Name']=[[border1]];v0["4"]=Instance.new("Frame",v0["3"]);v0["4"]['BorderSizePixel']=438 -(262 + 176) ;v0["4"]['BackgroundColor3']=Color3.fromRGB(1803 -(345 + 1376) ,1826 -(1344 + 400) ,770 -(198 + 490) );v0["4"]['Size']=UDim2.new(0 -0 ,2 -1 ,1206 -(696 + 510) ,98 -75 );v0["4"]['Position']=UDim2.new(1 -0 ,1262 -(1091 + 171) ,406 -(183 + 223) ,0);v0["4"]['BorderColor3']=Color3.fromRGB(0 -0 ,0 + 0 ,0 + 0 );v0["5"]=Instance.new("Frame",v0["3"]);v0["5"]['BorderSizePixel']=0;v0["5"]['BackgroundColor3']=Color3.fromRGB(14 + 68 ,257 -175 ,271 -189 );v0["5"]['Size']=UDim2.new(374 -(123 + 251) ,4 -3 ,698 -(208 + 490) ,23);v0["5"]['BorderColor3']=Color3.fromRGB(0 + 0 ,0 + 0 ,0);v0["6"]=Instance.new("Frame",v0["3"]);v0["6"]['BorderSizePixel']=836 -(660 + 176) ;v0["6"]['BackgroundColor3']=Color3.fromRGB(82,10 + 72 ,284 -(14 + 188) );v0["6"]['Size']=UDim2.new(0,850 -(534 + 141) ,0 + 0 ,1 + 0 );v0["6"]['BorderColor3']=Color3.fromRGB(0 + 0 ,0,0 + 0 );v0["7"]=Instance.new("Frame",v0["3"]);v0["7"]['BorderSizePixel']=0 -0 ;v0["7"]['BackgroundColor3']=Color3.fromRGB(129 -47 ,3 + 79 ,229 -147 );v0["7"]['Size']=UDim2.new(0 -0 ,94 + 81 ,1167 -(645 + 522) ,1 + 0 );v0["7"]['Position']=UDim2.new(396 -(115 + 281) ,0 -0 ,2 -1 ,0 -0 );v0["7"]['BorderColor3']=Color3.fromRGB(0,0 + 0 ,0 -0 );v0["8"]=Instance.new("Folder",v0["2"]);v0["8"]['Name']=[[border2]];v0["9"]=Instance.new("Frame",v0["8"]);v0["9"]['BorderSizePixel']=0 -0 ;v0["9"]['BackgroundColor3']=Color3.fromRGB(867 -(550 + 317) ,0,0 -0 );v0["9"]['Size']=UDim2.new(505 -(351 + 154) ,247 -71 ,0 -0 ,2 -1 );v0["9"]['Position']=UDim2.new(285 -(134 + 151) ,1665 -(970 + 695) ,1.05 + 0 ,0 + 0 );v0["9"]['BorderColor3']=Color3.fromRGB(0 -0 ,1990 -(582 + 1408) ,0 -0 );v0['a']=Instance.new("Frame",v0["8"]);v0['a']['BorderSizePixel']=0 -0 ;v0['a']['BackgroundColor3']=Color3.fromRGB(0 -0 ,0 -0 ,1824 -(1195 + 629) );v0['a']['Size']=UDim2.new(0 -0 ,1960 -(214 + 1570) ,241 -(187 + 54) ,1456 -(990 + 465) );v0['a']['Position']=UDim2.new(0 + 0 ,780 -(162 + 618) , -(0.03846 + 0),0 + 0 );v0['a']['BorderColor3']=Color3.fromRGB(0 + 0 ,0 -0 ,0 -0 );v0['b']=Instance.new("Frame",v0["8"]);v0['b']['BorderSizePixel']=0;v0['b']['BackgroundColor3']=Color3.fromRGB(0 -0 ,0 + 0 ,1636 -(1373 + 263) );v0['b']['Size']=UDim2.new(0,3 -2 ,1000 -(451 + 549) ,25);v0['b']['Position']=UDim2.new( -(0.00571 + 0),0 + 0 , -(0.03846 + 0),0 -0 );v0['b']['BorderColor3']=Color3.fromRGB(0 -0 ,1469 -(1269 + 200) ,1384 -(746 + 638) );v0['c']=Instance.new("Frame",v0["8"]);v0['c']['BorderSizePixel']=0 + 0 ;v0['c']['BackgroundColor3']=Color3.fromRGB(0 -0 ,341 -(218 + 123) ,1581 -(1535 + 46) );v0['c']['Size']=UDim2.new(0 -0 ,1 + 0 ,0 + 0 ,4 + 21 );v0['c']['Position']=UDim2.new(561.00571 -(306 + 254) ,0 + 0 , -(0.03846 -0),1467 -(899 + 568) );v0['c']['BorderColor3']=Color3.fromRGB(0 -0 ,0 + 0 ,0 -0 );v0['d']=Instance.new("TextLabel",v0["2"]);v0['d']['BorderSizePixel']=603 -(268 + 335) ;v0['d']['TextSize']=301 -(60 + 230) ;v0['d']['TextXAlignment']=Enum.TextXAlignment.Left;v0['d']['BackgroundColor3']=Color3.fromRGB(211 + 44 ,186 + 69 ,120 + 135 );v0['d']['FontFace']=Font.new([[rbxasset://fonts/families/Inconsolata.json]],Enum.FontWeight.Regular,Enum.FontStyle.Normal);v0['d']['TextColor3']=Color3.fromRGB(827 -(426 + 146) ,31 + 224 ,1711 -(282 + 1174) );v0['d']['BackgroundTransparency']=812 -(569 + 242) ;v0['d']['RichText']=true;v0['d']['Size']=UDim2.new(1619 -(1427 + 192) ,466 -304 ,0 + 0 ,2 + 20 );v0['d']['BorderColor3']=Color3.fromRGB(1279 -(706 + 318) ,86 + 102 ,1506 -(721 + 530) );v0['d']['Text']=[[Loaded, Zaza in 0.000000 ms]];v0['d']['Name']=[[Text]];v0['d']['Position']=UDim2.new(0.04,1271 -(945 + 326) ,0 -0 ,0 + 0 );v0['e']=Instance.new("UIStroke",v0['d']);v0['e']['Transparency']=0.33;v0['f']=Instance.new("LocalScript",v0['d']);v0["10"]=Instance.new("LocalScript",v0["1"]);v0["10"]['Name']=[[Message1]];v0["11"]=Instance.new("Frame",v0["1"]);v0["11"]['BorderSizePixel']=700 -(271 + 429) ;v0["11"]['BackgroundColor3']=Color3.fromRGB(42 + 3 ,1545 -(1408 + 92) ,596 -(83 + 468) );v0["11"]['Size']=UDim2.new(1086 -(461 + 625) ,1426 -(993 + 295) ,0 + 0 ,60 -38 );v0["11"]['Position']=UDim2.new(1171.0055 -(418 + 753) ,0 + 0 ,0.047 + 0 ,0 + 0 );v0["11"]['BorderColor3']=Color3.fromRGB(0 + 0 ,0 + 0 ,0 + 0 );v0["11"]['Name']=[[Message2]];v0["12"]=Instance.new("Folder",v0["11"]);v0["12"]['Name']=[[border1]];v0["13"]=Instance.new("Frame",v0["12"]);v0["13"]['BorderSizePixel']=529 -(406 + 123) ;v0["13"]['BackgroundColor3']=Color3.fromRGB(1851 -(1749 + 20) ,20 + 62 ,1404 -(1249 + 73) );v0["13"]['Size']=UDim2.new(0 + 0 ,1,1145 -(466 + 679) ,23);v0["13"]['Position']=UDim2.new(2 -1 ,0 -0 ,0 + 0 ,1900 -(106 + 1794) );v0["13"]['BorderColor3']=Color3.fromRGB(0 + 0 ,0 + 0 ,0 + 0 );v0["14"]=Instance.new("Frame",v0["12"]);v0["14"]['BorderSizePixel']=0 -0 ;v0["14"]['BackgroundColor3']=Color3.fromRGB(221 -139 ,82,196 -(4 + 110) );v0["14"]['Size']=UDim2.new(584 -(57 + 527) ,1428 -(41 + 1386) ,103 -(17 + 86) ,23);v0["14"]['BorderColor3']=Color3.fromRGB(0 + 0 ,0 -0 ,0 -0 );v0["15"]=Instance.new("Frame",v0["12"]);v0["15"]['BorderSizePixel']=166 -(122 + 44) ;v0["15"]['BackgroundColor3']=Color3.fromRGB(140 -58 ,271 -189 ,67 + 15 );v0["15"]['Size']=UDim2.new(0 + 0 ,281 -142 ,663 -(174 + 489) ,66 -(30 + 35) );v0["15"]['BorderColor3']=Color3.fromRGB(0 + 0 ,1257 -(1043 + 214) ,0 -0 );v0["16"]=Instance.new("Frame",v0["12"]);v0["16"]['BorderSizePixel']=1212 -(323 + 889) ;v0["16"]['BackgroundColor3']=Color3.fromRGB(82,220 -138 ,662 -(361 + 219) );v0["16"]['Size']=UDim2.new(320 -(53 + 267) ,663 -(303 + 221) ,1269 -(231 + 1038) ,1 + 0 );v0["16"]['Position']=UDim2.new(0,0 + 0 ,414 -(15 + 398) ,982 -(18 + 964) );v0["16"]['BorderColor3']=Color3.fromRGB(0 -0 ,0 -0 ,0 + 0 );v0["17"]=Instance.new("Folder",v0["11"]);v0["17"]['Name']=[[border2]];v0["18"]=Instance.new("Frame",v0["17"]);v0["18"]['BorderSizePixel']=0 + 0 ;v0["18"]['BackgroundColor3']=Color3.fromRGB(850 -(20 + 830) ,0 + 0 ,126 -(116 + 10) );v0["18"]['Size']=UDim2.new(0 + 0 ,877 -(542 + 196) ,0,1 -0 );v0["18"]['Position']=UDim2.new(1248 -(111 + 1137) ,0 + 0 ,1.05 + 0 ,0 -0 );v0["18"]['BorderColor3']=Color3.fromRGB(0 + 0 ,0 -0 ,0);v0["19"]=Instance.new("Frame",v0["17"]);v0["19"]['BorderSizePixel']=0 -0 ;v0["19"]['BackgroundColor3']=Color3.fromRGB(1551 -(1126 + 425) ,0,0);v0["19"]['Size']=UDim2.new(0 + 0 ,544 -(118 + 287) ,0 -0 ,1122 -(118 + 1003) );v0["19"]['Position']=UDim2.new(771 -(326 + 445) ,0 -0 , -(377.03846 -(142 + 235)),0 -0 );v0["19"]['BorderColor3']=Color3.fromRGB(0 + 0 ,977 -(553 + 424) ,0 -0 );v0["1a"]=Instance.new("Frame",v0["17"]);v0["1a"]['BorderSizePixel']=0 + 0 ;v0["1a"]['BackgroundColor3']=Color3.fromRGB(0,0 + 0 ,0 + 0 );v0["1a"]['Size']=UDim2.new(0 -0 ,1 + 0 ,0,71 -46 );v0["1a"]['Position']=UDim2.new( -(0.00571 + 0),0 -0 , -(0.03846 -0),0 -0 );v0["1a"]['BorderColor3']=Color3.fromRGB(0,0 -0 ,0 + 0 );v0["1b"]=Instance.new("Frame",v0["17"]);v0["1b"]['BorderSizePixel']=0 -0 ;v0["1b"]['BackgroundColor3']=Color3.fromRGB(0,753 -(239 + 514) ,0 + 0 );v0["1b"]['Size']=UDim2.new(1329 -(797 + 532) ,1 + 0 ,0 + 0 ,25);v0["1b"]['Position']=UDim2.new(1.00571,0, -(0.03846 -0),0);v0["1b"]['BorderColor3']=Color3.fromRGB(0,0 -0 ,1202 -(373 + 829) );v0["1c"]=Instance.new("TextLabel",v0["11"]);v0["1c"]['BorderSizePixel']=0 + 0 ;v0["1c"]['TextSize']=742 -(476 + 255) ;v0["1c"]['TextXAlignment']=Enum.TextXAlignment.Left;v0["1c"]['BackgroundColor3']=Color3.fromRGB(1385 -(369 + 761) ,59 + 196 ,148 + 107 );v0["1c"]['FontFace']=Font.new([[rbxasset://fonts/families/Inconsolata.json]],Enum.FontWeight.Regular,Enum.FontStyle.Normal);v0["1c"]['TextColor3']=Color3.fromRGB(160 + 95 ,463 -208 ,2113 -(673 + 1185) );v0["1c"]['BackgroundTransparency']=1 -0 ;v0["1c"]['RichText']=true;v0["1c"]['Size']=UDim2.new(238 -(64 + 174) ,203 -79 ,0 + 0 ,32 -10 );v0["1c"]['BorderColor3']=Color3.fromRGB(65 + 21 ,591 -(144 + 192) ,337 -87 );v0["1c"]['Text']=[[Set, config Legit.lua]];v0["1c"]['Name']=[[Text]];v0["1c"]['Position']=UDim2.new(216.04 -(42 + 174) ,0 + 0 ,0 + 0 ,0 + 0 );v0["1d"]=Instance.new("UIStroke",v0["1c"]);v0["1d"]['Transparency']=0.33;v0["1e"]=Instance.new("LocalScript",v0["1c"]);v0["1f"]=Instance.new("LocalScript",v0["1"]);v0["1f"]['Name']=[[Message2]];local function v158() local v162=0;local v163;local v164;local v165;local v166;local v167;local v168;local v169;local v170;local v171;local v172;while true do if ((1 + 1)==v162) then v168=v168:sub(1505 -(363 + 1141) ,1581 -(1183 + 397) )   .. "."   .. v168:sub(5 -3 ) ;v169="Loaded, ";v170='<font color="#FFBBFF">Zaza</font>';v171=" in "   .. v168   .. " ms" ;v162=3 + 0 ;end if ((3 + 0)==v162) then v172="Loaded, Zaza in "   .. v168   .. " ms" ;v164.RichText=true;v164.Text="";for v215=1976 -(1913 + 62) , #v172 do local v216=0 + 0 ;local v217;while true do if (v216==(1848 -(559 + 1288))) then task.wait(0.015 -0 );break;end if (v216==(1933 -(565 + 1368))) then v217=string.sub(v172,3 -2 ,v215);if (v215<= #v169) then v164.Text=string.sub(v169,1662 -(1477 + 184) ,v215);elseif (v215<=( #v169 + (5 -1))) then local v315=string.sub("Zaza",1,v215-#v169 );v164.Text=v169   .. '<font color="#FFBBFF">'   .. v315   .. "</font>" ;else local v317=0 + 0 ;local v318;while true do if ((856 -(564 + 292))==v317) then v318=string.sub(v171,4 -3 ,v215-( #v169 + 1 + 3) );v164.Text=v169   .. v170   .. v318 ;break;end end end v216=1 -0 ;end end end break;end if (v162==(1 + 0)) then v166=(tick() -v165) * (3014 -2014) ;v167=tostring(math.floor(v166 * 10000000 ));v168=string.sub(v167,305 -(244 + 60) ,7);v168=string.format("%07d",tonumber(v168));v162=2 + 0 ;end if (v162==(476 -(41 + 435))) then v163=v0['f'];v164=v163.Parent;v165=tick();wait();v162=1002 -(938 + 63) ;end end end task.spawn(v158);local function v159() local v173=0 + 0 ;local v174;local v175;local v176;local v177;local v178;local v179;local v180;local v181;while true do if (v173==(2 + 1)) then v176.BackgroundTransparency=1126 -(936 + 189) ;v179.TextTransparency=1 + 0 ;for v218,v219 in ipairs(v177:GetChildren()) do if v219:IsA("Frame") then local v272=0;while true do if (v272==0) then v219.BackgroundTransparency=1 + 0 ;for v293,v294 in ipairs(v219:GetChildren()) do if v294:IsA("UIStroke") then v294.Transparency=1 + 0 ;end end break;end end end end v173=4;end if (v173==(2 + 4)) then for v220,v221 in ipairs(v179:GetChildren()) do if v221:IsA("UIStroke") then v181(v221,"Transparency",1613.33 -(1565 + 48) );end end wait(5 + 2 );v181(v176,"BackgroundTransparency",1139 -(782 + 356) );v173=274 -(176 + 91) ;end if (v173==(4 + 0)) then for v222,v223 in ipairs(v178:GetChildren()) do if v223:IsA("Frame") then local v273=0 + 0 ;while true do if (v273==(0 -0)) then v223.BackgroundTransparency=1 + 0 ;for v295,v296 in ipairs(v223:GetChildren()) do if v296:IsA("UIStroke") then v296.Transparency=1 -0 ;end end break;end end end end for v224,v225 in ipairs(v179:GetChildren()) do if v225:IsA("UIStroke") then v225.Transparency=1093 -(975 + 117) ;end end v181(v176,"BackgroundTransparency",1875 -(157 + 1718) );v173=5 + 0 ;end if (v173==(28 -20)) then for v226,v227 in ipairs(v179:GetChildren()) do if v227:IsA("UIStroke") then v181(v227,"Transparency",1);end end break;end if ((0 -0)==v173) then v174=v0["10"];v175=game:GetService("TweenService");v176=v174.Parent:WaitForChild("Message1");v173=1;end if ((1020 -(697 + 321))==v173) then v180=0.5 -0 ;v181=nil;function v181(v228,v229,v230) local v231=86 -(84 + 2) ;local v232;while true do if (v231==0) then v232=v175:Create(v228,TweenInfo.new(v180),{[v229]=v230});v232:Play();v231=1 -0 ;end if (v231==(2 -1)) then return v232;end end end v173=3;end if (v173==(3 + 4)) then v181(v179,"TextTransparency",1 -0 );for v233,v234 in ipairs(v177:GetChildren()) do if v234:IsA("Frame") then local v275=0 -0 ;while true do if (v275==(1333 -(605 + 728))) then v181(v234,"BackgroundTransparency",1);for v297,v298 in ipairs(v234:GetChildren()) do if v298:IsA("UIStroke") then v181(v298,"Transparency",1228 -(322 + 905) );end end break;end end end end for v235,v236 in ipairs(v178:GetChildren()) do if v236:IsA("Frame") then local v276=611 -(602 + 9) ;while true do if (v276==(1189 -(449 + 740))) then v181(v236,"BackgroundTransparency",3 -2 );for v299,v300 in ipairs(v236:GetChildren()) do if v300:IsA("UIStroke") then v181(v300,"Transparency",873 -(826 + 46) );end end break;end end end end v173=955 -(245 + 702) ;end if (v173==(15 -10)) then v181(v179,"TextTransparency",0 + 0 );for v237,v238 in ipairs(v177:GetChildren()) do if v238:IsA("Frame") then local v277=1898 -(260 + 1638) ;while true do if (v277==(1402 -(832 + 570))) then v181(v238,"BackgroundTransparency",0 + 0 );for v301,v302 in ipairs(v238:GetChildren()) do if v302:IsA("UIStroke") then v181(v302,"Transparency",441 -(382 + 58) );end end break;end end end end for v239,v240 in ipairs(v178:GetChildren()) do if v240:IsA("Frame") then local v278=0 + 0 ;while true do if (v278==(0 -0)) then v181(v240,"BackgroundTransparency",0 -0 );for v303,v304 in ipairs(v240:GetChildren()) do if v304:IsA("UIStroke") then v181(v304,"Transparency",1);end end break;end end end end v173=5 + 1 ;end if (v173==(2 -1)) then v177=v176:WaitForChild("border1");v178=v176:WaitForChild("border2");v179=v176:WaitForChild("Text");v173=1802 -(884 + 916) ;end end end task.spawn(v159);local function v160() local v182=0 -0 ;local v183;local v184;local v185;local v186;local v187;local v188;local v189;local v190;while true do if (v182==1) then v186='<font color="#FFFFFF">Legit</font>';v187='<font color="#FFFFFF">.</font>';v188='<font color="#FFBBFF">lua</font>';v182=5 -3 ;end if ((1205 -(902 + 303))==v182) then v183=v0["1e"];v184=v183.Parent;v185="Set, config ";v182=1 -0 ;end if (v182==(1892 -(1569 + 320))) then v190="Set, config Legit.lua";for v241=2 -1 , #v190 do local v242=0 + 0 ;local v243;while true do if (v242==(1691 -(1121 + 569))) then task.wait(214.015 -(22 + 192) );break;end if (v242==(683 -(483 + 200))) then v243=string.sub(v190,1464 -(1404 + 59) ,v241);if (v241<= #v185) then v184.Text=string.sub(v185,2 -1 ,v241);elseif (v241<=( #v185 + (6 -1))) then local v319=765 -(468 + 297) ;local v320;while true do if (v319==(425 -(360 + 65))) then v320=string.sub("Legit",563 -(334 + 228) ,v241-#v185 );v184.Text=v185   .. '<font color="#FFFFFF">'   .. v320   .. "</font>" ;break;end end elseif (v241==( #v185 + (20 -14))) then v184.Text=v185   .. v186   .. '<font color="#FFFFFF">.</font>' ;else local v326=string.sub("lua",1,v241-( #v185 + (260 -(79 + 175))) );v184.Text=v185   .. v186   .. v187   .. '<font color="#FFBBFF">'   .. v326   .. "</font>" ;end v242=2 -1 ;end end end break;end if (v182==(2 -0)) then v189=v185   .. v186   .. v187   .. v188 ;v184.RichText=true;v184.Text="";v182=1 + 2 ;end end end task.spawn(v160);local function v161() local v191=236 -(141 + 95) ;local v192;local v193;local v194;local v195;local v196;local v197;local v198;local v199;local v200;while true do if (v191==(4 + 0)) then v197.TextTransparency=2 -1 ;for v244,v245 in ipairs(v195:GetChildren()) do if v245:IsA("Frame") then local v279=0;while true do if (v279==(0 -0)) then v245.BackgroundTransparency=1 + 0 ;for v305,v306 in ipairs(v245:GetChildren()) do if v306:IsA("UIStroke") then v306.Transparency=2 -1 ;end end break;end end end end for v246,v247 in ipairs(v196:GetChildren()) do if v247:IsA("Frame") then local v280=0 + 0 ;while true do if (v280==(0 + 0)) then v247.BackgroundTransparency=1 + 0 ;for v307,v308 in ipairs(v247:GetChildren()) do if v308:IsA("UIStroke") then v308.Transparency=1 -0 ;end end break;end end end end v191=3 + 2 ;end if (v191==(170 -(92 + 71))) then for v248,v249 in ipairs(v197:GetChildren()) do if v249:IsA("UIStroke") then v199(v249,"Transparency",0.33);end end wait(3.5 + 3 );v200(v194,UDim2.new(0.005 -0 ,765 -(574 + 191) ,0.008 + 0 ,0 -0 ));v191=1 + 7 ;end if ((14 -8)==v191) then v199(v197,"TextTransparency",0 + 0 );for v250,v251 in ipairs(v195:GetChildren()) do if v251:IsA("Frame") then local v281=849 -(254 + 595) ;while true do if (v281==(1244 -(485 + 759))) then v199(v251,"BackgroundTransparency",0 -0 );for v309,v310 in ipairs(v251:GetChildren()) do if v310:IsA("UIStroke") then v199(v310,"Transparency",1190 -(442 + 747) );end end break;end end end end for v252,v253 in ipairs(v196:GetChildren()) do if v253:IsA("Frame") then local v282=1135 -(832 + 303) ;while true do if (v282==(126 -(55 + 71))) then v199(v253,"BackgroundTransparency",0 -0 );for v311,v312 in ipairs(v253:GetChildren()) do if v312:IsA("UIStroke") then v199(v312,"Transparency",1791 -(573 + 1217) );end end break;end end end end v191=19 -12 ;end if (v191==3) then v200=nil;function v200(v254,v255) local v256=789 -(766 + 23) ;local v257;local v258;while true do if ((0 + 0)==v256) then v257=TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.Out);v258=v193:Create(v254,v257,{Position=v255});v256=1 -0 ;end if (v256==(2 -1)) then v258:Play();return v258;end end end v194.BackgroundTransparency=940 -(714 + 225) ;v191=1077 -(1036 + 37) ;end if (v191==(23 -15)) then wait(2);v199(v194,"BackgroundTransparency",1);v199(v197,"TextTransparency",1 + 0 );v191=17 -8 ;end if (v191==(11 -2)) then for v259,v260 in ipairs(v195:GetChildren()) do if v260:IsA("Frame") then v199(v260,"BackgroundTransparency",1 + 0 );for v285,v286 in ipairs(v260:GetChildren()) do if v286:IsA("UIStroke") then v199(v286,"Transparency",1 -0 );end end end end for v261,v262 in ipairs(v196:GetChildren()) do if v262:IsA("Frame") then local v283=806 -(118 + 688) ;while true do if (v283==(48 -(25 + 23))) then v199(v262,"BackgroundTransparency",1);for v313,v314 in ipairs(v262:GetChildren()) do if v314:IsA("UIStroke") then v199(v314,"Transparency",1 + 0 );end end break;end end end end for v263,v264 in ipairs(v197:GetChildren()) do if v264:IsA("UIStroke") then v199(v264,"Transparency",1887 -(927 + 959) );end end break;end if ((3 -2)==v191) then v195=v194:WaitForChild("border1");v196=v194:WaitForChild("border2");v197=v194:WaitForChild("Text");v191=734 -(16 + 716) ;end if (v191==(0 -0)) then v192=v0["1f"];v193=game:GetService("TweenService");v194=v192.Parent:WaitForChild("Message2");v191=98 -(11 + 86) ;end if (v191==(2 + 3)) then for v265,v266 in ipairs(v197:GetChildren()) do if v266:IsA("UIStroke") then v266.Transparency=1;end end wait(2 -1 );v199(v194,"BackgroundTransparency",0);v191=291 -(175 + 110) ;end if (v191==(4 -2)) then v198=0.5 -0 ;v199=nil;function v199(v267,v268,v269) local v270=0;local v271;while true do if (v270==(1796 -(503 + 1293))) then v271=v193:Create(v267,TweenInfo.new(v198),{[v268]=v269});v271:Play();v270=1 + 0 ;end if (v270==(740 -(396 + 343))) then return v271;end end end v191=8 -5 ;end end end task.spawn(v161);return v0["1"],require;
+-- StarterGui.Test
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Test]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.Test.Message1
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["2"]["Size"] = UDim2.new(0, 175, 0, 22);
+G2L["2"]["Position"] = UDim2.new(0.00548, 0, 0.00847, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Message1]];
+
+
+-- StarterGui.Test.Message1.border1
+G2L["3"] = Instance.new("Folder", G2L["2"]);
+G2L["3"]["Name"] = [[border1]];
+
+
+-- StarterGui.Test.Message1.border1.Frame
+G2L["4"] = Instance.new("Frame", G2L["3"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["4"]["Size"] = UDim2.new(0, 1, 0, 23);
+G2L["4"]["Position"] = UDim2.new(1, 0, 0, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.border1.Frame
+G2L["5"] = Instance.new("Frame", G2L["3"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["5"]["Size"] = UDim2.new(0, 1, 0, 23);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.border1.Frame
+G2L["6"] = Instance.new("Frame", G2L["3"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["6"]["Size"] = UDim2.new(0, 175, 0, 1);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.border1.Frame
+G2L["7"] = Instance.new("Frame", G2L["3"]);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["7"]["Size"] = UDim2.new(0, 175, 0, 1);
+G2L["7"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.border2
+G2L["8"] = Instance.new("Folder", G2L["2"]);
+G2L["8"]["Name"] = [[border2]];
+
+
+-- StarterGui.Test.Message1.border2.Frame
+G2L["9"] = Instance.new("Frame", G2L["8"]);
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Size"] = UDim2.new(0, 176, 0, 1);
+G2L["9"]["Position"] = UDim2.new(0, 0, 1.05, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.border2.Frame
+G2L["a"] = Instance.new("Frame", G2L["8"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Size"] = UDim2.new(0, 176, 0, 1);
+G2L["a"]["Position"] = UDim2.new(0, 0, -0.03846, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.border2.Frame
+G2L["b"] = Instance.new("Frame", G2L["8"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Size"] = UDim2.new(0, 1, 0, 25);
+G2L["b"]["Position"] = UDim2.new(-0.00571, 0, -0.03846, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.border2.Frame
+G2L["c"] = Instance.new("Frame", G2L["8"]);
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Size"] = UDim2.new(0, 1, 0, 25);
+G2L["c"]["Position"] = UDim2.new(1.00571, 0, -0.03846, 0);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message1.Text
+G2L["d"] = Instance.new("TextLabel", G2L["2"]);
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 11;
+G2L["d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundTransparency"] = 1;
+G2L["d"]["RichText"] = true;
+G2L["d"]["Size"] = UDim2.new(0, 162, 0, 22);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(255, 188, 255);
+G2L["d"]["Text"] = [[Loaded, Zaza in 0.000000 ms]];
+G2L["d"]["Name"] = [[Text]];
+G2L["d"]["Position"] = UDim2.new(0.04, 0, 0, 0);
+
+
+-- StarterGui.Test.Message1.Text.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["d"]);
+G2L["e"]["Transparency"] = 0.33;
+
+
+-- StarterGui.Test.Message1.Text.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["d"]);
+
+
+
+-- StarterGui.Test.Message1
+G2L["10"] = Instance.new("LocalScript", G2L["1"]);
+G2L["10"]["Name"] = [[Message1]];
+
+
+-- StarterGui.Test.Message2
+G2L["11"] = Instance.new("Frame", G2L["1"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(45, 45, 45);
+G2L["11"]["Size"] = UDim2.new(0, 138, 0, 22);
+G2L["11"]["Position"] = UDim2.new(0.0055, 0, 0.047, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Name"] = [[Message2]];
+
+
+-- StarterGui.Test.Message2.border1
+G2L["12"] = Instance.new("Folder", G2L["11"]);
+G2L["12"]["Name"] = [[border1]];
+
+
+-- StarterGui.Test.Message2.border1.Frame
+G2L["13"] = Instance.new("Frame", G2L["12"]);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["13"]["Size"] = UDim2.new(0, 1, 0, 23);
+G2L["13"]["Position"] = UDim2.new(1, 0, 0, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.border1.Frame
+G2L["14"] = Instance.new("Frame", G2L["12"]);
+G2L["14"]["BorderSizePixel"] = 0;
+G2L["14"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["14"]["Size"] = UDim2.new(0, 1, 0, 23);
+G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.border1.Frame
+G2L["15"] = Instance.new("Frame", G2L["12"]);
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["15"]["Size"] = UDim2.new(0, 139, 0, 1);
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.border1.Frame
+G2L["16"] = Instance.new("Frame", G2L["12"]);
+G2L["16"]["BorderSizePixel"] = 0;
+G2L["16"]["BackgroundColor3"] = Color3.fromRGB(82, 82, 82);
+G2L["16"]["Size"] = UDim2.new(0, 139, 0, 1);
+G2L["16"]["Position"] = UDim2.new(0, 0, 1, 0);
+G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.border2
+G2L["17"] = Instance.new("Folder", G2L["11"]);
+G2L["17"]["Name"] = [[border2]];
+
+
+-- StarterGui.Test.Message2.border2.Frame
+G2L["18"] = Instance.new("Frame", G2L["17"]);
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Size"] = UDim2.new(0, 139, 0, 1);
+G2L["18"]["Position"] = UDim2.new(0, 0, 1.05, 0);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.border2.Frame
+G2L["19"] = Instance.new("Frame", G2L["17"]);
+G2L["19"]["BorderSizePixel"] = 0;
+G2L["19"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["19"]["Size"] = UDim2.new(0, 139, 0, 1);
+G2L["19"]["Position"] = UDim2.new(0, 0, -0.03846, 0);
+G2L["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.border2.Frame
+G2L["1a"] = Instance.new("Frame", G2L["17"]);
+G2L["1a"]["BorderSizePixel"] = 0;
+G2L["1a"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1a"]["Size"] = UDim2.new(0, 1, 0, 25);
+G2L["1a"]["Position"] = UDim2.new(-0.00571, 0, -0.03846, 0);
+G2L["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.border2.Frame
+G2L["1b"] = Instance.new("Frame", G2L["17"]);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1b"]["Size"] = UDim2.new(0, 1, 0, 25);
+G2L["1b"]["Position"] = UDim2.new(1.00571, 0, -0.03846, 0);
+G2L["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Test.Message2.Text
+G2L["1c"] = Instance.new("TextLabel", G2L["11"]);
+G2L["1c"]["BorderSizePixel"] = 0;
+G2L["1c"]["TextSize"] = 11;
+G2L["1c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1c"]["RichText"] = true;
+G2L["1c"]["Size"] = UDim2.new(0, 124, 0, 22);
+G2L["1c"]["BorderColor3"] = Color3.fromRGB(86, 255, 250);
+G2L["1c"]["Text"] = [[Set, config Legit.lua]];
+G2L["1c"]["Name"] = [[Text]];
+G2L["1c"]["Position"] = UDim2.new(0.04, 0, 0, 0);
+
+
+-- StarterGui.Test.Message2.Text.UIStroke
+G2L["1d"] = Instance.new("UIStroke", G2L["1c"]);
+G2L["1d"]["Transparency"] = 0.33;
+
+
+-- StarterGui.Test.Message2.Text.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["1c"]);
+
+
+
+-- StarterGui.Test.Message2
+G2L["1f"] = Instance.new("LocalScript", G2L["1"]);
+G2L["1f"]["Name"] = [[Message2]];
+
+
+-- StarterGui.Test.parent
+G2L["20"] = Instance.new("LocalScript", G2L["1"]);
+G2L["20"]["Name"] = [[parent]];
+
+
+-- StarterGui.Test.Message1.Text.LocalScript
+local function C_f()
+local script = G2L["f"];
+	local textLabel = script.Parent
+	local startTime = tick()
+	wait()
+	local elapsed = (tick() - startTime) * 1000
+	local raw = tostring(math.floor(elapsed * 10000000))
+	local formatted = string.sub(raw, 1, 7)
+	formatted = string.format("%07d", tonumber(formatted))
+	formatted = formatted:sub(1, 1) .. "." .. formatted:sub(2)
+	
+	local prefix = 'Loaded, '
+	local zaza = '<font color="#FFBBFF">Zaza</font>'
+	local suffix = ' in ' .. formatted .. ' ms'
+	local fullVisibleText = 'Loaded, Zaza in ' .. formatted .. ' ms'
+	
+	textLabel.RichText = true
+	textLabel.Text = ""
+	
+	for i = 1, #fullVisibleText do
+		local visibleTyped = string.sub(fullVisibleText, 1, i)
+		if i <= #prefix then
+			textLabel.Text = string.sub(prefix, 1, i)
+		elseif i <= #prefix + 4 then
+			local zazaTyped = string.sub("Zaza", 1, i - #prefix)
+			textLabel.Text = prefix .. '<font color="#FFBBFF">' .. zazaTyped .. '</font>'
+		else
+			local afterZaza = string.sub(suffix, 1, i - (#prefix + 4))
+			textLabel.Text = prefix .. zaza .. afterZaza
+		end
+		task.wait(0.015)
+	end
+	
+end;
+task.spawn(C_f);
+-- StarterGui.Test.Message1
+local function C_10()
+local script = G2L["10"];
+	local TweenService = game:GetService("TweenService")
+	local message = script.Parent:WaitForChild("Message1")
+	local border1 = message:WaitForChild("border1")
+	local border2 = message:WaitForChild("border2")
+	local textLabel = message:WaitForChild("Text")
+	local fadeTime = 0.5
+	
+	local function fadeObject(obj, property, goalValue)
+		local tween = TweenService:Create(obj, TweenInfo.new(fadeTime), {[property] = goalValue})
+		tween:Play()
+		return tween
+	end
+	
+	message.BackgroundTransparency = 1
+	textLabel.TextTransparency = 1
+	
+	for _, frame in ipairs(border1:GetChildren()) do
+		if frame:IsA("Frame") then
+			frame.BackgroundTransparency = 1
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					uiStroke.Transparency = 1
+				end
+			end
+		end
+	end
+	
+	for _, frame in ipairs(border2:GetChildren()) do
+		if frame:IsA("Frame") then
+			frame.BackgroundTransparency = 1
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					uiStroke.Transparency = 1
+				end
+			end
+		end
+	end
+	
+	for _, uiStroke in ipairs(textLabel:GetChildren()) do
+		if uiStroke:IsA("UIStroke") then
+			uiStroke.Transparency = 1
+		end
+	end
+	
+	fadeObject(message, "BackgroundTransparency", 0)
+	fadeObject(textLabel, "TextTransparency", 0)
+	
+	for _, frame in ipairs(border1:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 0)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, frame in ipairs(border2:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 0)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, uiStroke in ipairs(textLabel:GetChildren()) do
+		if uiStroke:IsA("UIStroke") then
+			fadeObject(uiStroke, "Transparency", 0.33)
+		end
+	end
+	
+	wait(7)
+	
+	fadeObject(message, "BackgroundTransparency", 1)
+	fadeObject(textLabel, "TextTransparency", 1)
+	
+	for _, frame in ipairs(border1:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 1)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, frame in ipairs(border2:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 1)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, uiStroke in ipairs(textLabel:GetChildren()) do
+		if uiStroke:IsA("UIStroke") then
+			fadeObject(uiStroke, "Transparency", 1)
+		end
+	end
+	
+end;
+task.spawn(C_10);
+-- StarterGui.Test.Message2.Text.LocalScript
+local function C_1e()
+local script = G2L["1e"];
+	local textLabel = script.Parent
+	local prefix = "Set, config "
+	local legit = '<font color="#FFFFFF">Legit</font>'
+	local dot = '<font color="#FFFFFF">.</font>'
+	local lua = '<font color="#FFBBFF">lua</font>'
+	local fullText = prefix .. legit .. dot .. lua
+	
+	textLabel.RichText = true
+	textLabel.Text = ""
+	
+	local rawText = "Set, config Legit.lua"
+	
+	for i = 1, #rawText do
+		local visibleTyped = string.sub(rawText, 1, i)
+		if i <= #prefix then
+			textLabel.Text = string.sub(prefix, 1, i)
+		elseif i <= #prefix + 5 then 
+			local legitTyped = string.sub("Legit", 1, i - #prefix)
+			textLabel.Text = prefix .. '<font color="#FFFFFF">' .. legitTyped .. '</font>'
+		elseif i == #prefix + 6 then 
+			textLabel.Text = prefix .. legit .. '<font color="#FFFFFF">.</font>'
+		else
+			local luaTyped = string.sub("lua", 1, i - (#prefix + 6))
+			textLabel.Text = prefix .. legit .. dot .. '<font color="#FFBBFF">' .. luaTyped .. '</font>'
+		end
+		task.wait(0.015)
+	end
+	
+end;
+task.spawn(C_1e);
+-- StarterGui.Test.Message2
+local function C_1f()
+local script = G2L["1f"];
+	local TweenService = game:GetService("TweenService")
+	local message = script.Parent:WaitForChild("Message2")
+	local border1 = message:WaitForChild("border1")
+	local border2 = message:WaitForChild("border2")
+	local textLabel = message:WaitForChild("Text")
+	local fadeTime = 0.5
+	
+	local function fadeObject(obj, property, goalValue)
+		local tween = TweenService:Create(obj, TweenInfo.new(fadeTime), {[property] = goalValue})
+		tween:Play()
+		return tween
+	end
+	
+	local function moveSmooth(obj, goalPos)
+		local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+		local tween = TweenService:Create(obj, tweenInfo, {Position = goalPos})
+		tween:Play()
+		return tween
+	end
+	
+	message.BackgroundTransparency = 1
+	textLabel.TextTransparency = 1
+	
+	for _, frame in ipairs(border1:GetChildren()) do
+		if frame:IsA("Frame") then
+			frame.BackgroundTransparency = 1
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					uiStroke.Transparency = 1
+				end
+			end
+		end
+	end
+	
+	for _, frame in ipairs(border2:GetChildren()) do
+		if frame:IsA("Frame") then
+			frame.BackgroundTransparency = 1
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					uiStroke.Transparency = 1
+				end
+			end
+		end
+	end
+	
+	for _, uiStroke in ipairs(textLabel:GetChildren()) do
+		if uiStroke:IsA("UIStroke") then
+			uiStroke.Transparency = 1
+		end
+	end
+	
+	wait(1)
+	
+	fadeObject(message, "BackgroundTransparency", 0)
+	fadeObject(textLabel, "TextTransparency", 0)
+	
+	for _, frame in ipairs(border1:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 0)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, frame in ipairs(border2:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 0)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, uiStroke in ipairs(textLabel:GetChildren()) do
+		if uiStroke:IsA("UIStroke") then
+			fadeObject(uiStroke, "Transparency", 0.33)
+		end
+	end
+	
+	wait(6.5)
+	
+	moveSmooth(message, UDim2.new(0.005, 0, 0.008, 0))
+	
+	wait(2) 
+	
+	fadeObject(message, "BackgroundTransparency", 1)
+	fadeObject(textLabel, "TextTransparency", 1)
+	
+	for _, frame in ipairs(border1:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 1)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, frame in ipairs(border2:GetChildren()) do
+		if frame:IsA("Frame") then
+			fadeObject(frame, "BackgroundTransparency", 1)
+			for _, uiStroke in ipairs(frame:GetChildren()) do
+				if uiStroke:IsA("UIStroke") then
+					fadeObject(uiStroke, "Transparency", 1)
+				end
+			end
+		end
+	end
+	
+	for _, uiStroke in ipairs(textLabel:GetChildren()) do
+		if uiStroke:IsA("UIStroke") then
+			fadeObject(uiStroke, "Transparency", 1)
+		end
+	end
+	
+end;
+task.spawn(C_1f);
+-- StarterGui.Test.parent
+local function C_20()
+local script = G2L["20"];
+	local screenGui = script.Parent
+	screenGui.Parent = game:GetService("CoreGui")
+	
+end;
+task.spawn(C_20);
+
+return G2L["1"], require;
